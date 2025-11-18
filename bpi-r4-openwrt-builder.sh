@@ -27,10 +27,10 @@ cd mtk-openwrt-feeds; git checkout 1952d51abe1acc6ba61624921c476e330f3f18e5; cd 
 rm -rf mtk-openwrt-feeds/24.10/patches-feeds/108-strongswan-add-uci-support.patch 
 
 ### wireless-regdb modification - this remove all regdb wireless countries restrictions
-#rm -rf openwrt/package/firmware/wireless-regdb/patches/*.*
-#rm -rf mtk-openwrt-feeds/autobuild/unified/filogic/mac80211/24.10/files/package/firmware/wireless-regdb/patches/*.*
-#\cp -r my_files/500-tx_power.patch mtk-openwrt-feeds/autobuild/unified/filogic/mac80211/24.10/files/package/firmware/wireless-regdb/patches
-#\cp -r my_files/regdb.Makefile openwrt/package/firmware/wireless-regdb/Makefile
+rm -rf openwrt/package/firmware/wireless-regdb/patches/*.*
+rm -rf mtk-openwrt-feeds/autobuild/unified/filogic/mac80211/24.10/files/package/firmware/wireless-regdb/patches/*.*
+\cp -r my_files/500-tx_power.patch mtk-openwrt-feeds/autobuild/unified/filogic/mac80211/24.10/files/package/firmware/wireless-regdb/patches
+\cp -r my_files/regdb.Makefile openwrt/package/firmware/wireless-regdb/Makefile
 
 ### tx_power patch - required for BE14 boards with defective eeprom flash
 \cp -r my_files/99999_tx_power_check.patch mtk-openwrt-feeds/autobuild/unified/filogic/mac80211/24.10/files/package/kernel/mt76/patches/
